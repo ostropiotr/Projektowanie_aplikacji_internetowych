@@ -9,6 +9,9 @@ if (isset($_POST['kwota'])) {
     if ($kwota === "" || $procent === "" || $lata === "") {
         $errors[] = "Wszystkie pola muszą być wypełnione";
     } 
+	elseif (!is_numeric($kwota) || !is_numeric($procent) || !is_numeric($lata)) {
+        $errors[] = "Wszystkie wartości muszą być liczbami";
+    } 
     elseif ($kwota <= 0 || $procent <= 0 || $lata <= 0) {
         $errors[] = "Podane dane muszą być większe od 0";
     }
@@ -20,4 +23,5 @@ if (isset($_POST['kwota'])) {
 }
 include 'calc_view.php';
 ?>
+
 
