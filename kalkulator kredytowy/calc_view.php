@@ -4,13 +4,13 @@
 <body>
     <form action="calc.php" method="post">
         <label>Kwota kredytu:</label>
-        <input type="number" name="kwota" value="<?php echo $kwota;?>">
+        <input type="text" name="kwota" value="<?php echo $kwota;?>">
 		<br><br>
         <label>Ile lat:</label>
-        <input type="number" name="lata" value="<?php echo $lata;?>">
+        <input type="text" name="lata" value="<?php echo $lata;?>">
 		<br><br>
         <label>Oprocentowanie:</label>
-        <input type="number" name="procent" value="<?php echo $procent;?>">
+        <input type="text" name="procent" value="<?php echo $procent;?>">
 		<br><br>
         <input type="submit" value="Oblicz ratę na miesiąc">
     </form>
@@ -28,3 +28,4 @@
     <?php endif;?>
 
 </body>
+
